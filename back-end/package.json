@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --passWithNoTests --silent --runInBand",
+    "test:verbose": "jest --runInBand",
     "test:unit": "npm test -- --watch -c jest-unit-config.js"
   },
   "keywords": [],
