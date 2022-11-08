@@ -1,4 +1,4 @@
-import { OK } from '../helpers/http/http-helper'
+import { OK } from '../../helpers/http/http-helper'
 import { DefaultController } from './default-controller'
 
 interface SutTypes {

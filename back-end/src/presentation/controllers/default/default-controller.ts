@@ -1,5 +1,5 @@
-import { OK } from '../helpers/http/http-helper'
-import { Controller, HttpRequest, HttpResponse } from '../protocols'
+import { OK } from '../../helpers/http/http-helper'
+import { Controller, HttpRequest, HttpResponse } from '../../protocols'
 
 export class DefaultController implements Controller {
   async handle(httpRequest: HttpRequest): Promise<HttpResponse> {
