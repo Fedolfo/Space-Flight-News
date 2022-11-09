@@ -5,7 +5,7 @@ import Articles from '../pages/Articles'
 const MainRoutes = () => {
   return (
     <Routes>
-      <Route element={<Articles />} />
+      <Route path='/' element={<Articles />} />
     </Routes>
   )
 }
