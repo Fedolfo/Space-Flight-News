@@ -1,5 +1,5 @@
 import { ArticlesModel } from '../models/articles'
 
 export interface LoadArticles {
-  loadAllArticles: () => Promise<ArticlesModel[]>
+  loadAllArticles: (page: number) => Promise<ArticlesModel[]>
 }

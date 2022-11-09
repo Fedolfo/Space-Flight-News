@@ -7,9 +7,11 @@ export class LoadArticlesController implements Controller {
 
   async handle(httpRequest: HttpRequest): Promise<HttpResponse> {
     try {
-      const results = await this.loadArticles.loadAllArticles()
+      const p = httpRequest.query.p
+      const results = await this.loadArticles.loadAllArticles(p)
       return (results.length > 0) ? OK(results) : noContent()
     } catch (error) {
+      console.log(error)
       return serverError(error as Error)
     }
   }

@@ -5,7 +5,7 @@ import { LoadArticlesRepository } from '../protocols/db/articles/load-articles-r
 export class DbLoadArticles implements LoadArticles {
   constructor(private readonly loadArticlesRepository: LoadArticlesRepository) {}
 
-  async loadAllArticles (): Promise<ArticlesModel[]> {
-    return await this.loadArticlesRepository.loadAllArticles()
+  async loadAllArticles (page: number): Promise<ArticlesModel[]> {
+    return await this.loadArticlesRepository.loadAllArticles(page)
   }
 }
