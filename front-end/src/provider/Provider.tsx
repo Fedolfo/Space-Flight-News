@@ -1,8 +1,11 @@
-import PropTypes from 'prop-types';
 import MyContext from '../context/MyContext';
+import React from 'react';
 
-function Provider({ children }) {
+interface Props {
+  children: React.ReactNode;
+}
 
+const Provider: React.FC<Props> = ({ children }) => {
   const contextValue = {
 
   };
@@ -12,8 +15,5 @@ function Provider({ children }) {
   );
 }
 
-Provider.propTypes = {
-  children: PropTypes.node,
-}.isRequired;
 
 export default Provider;
