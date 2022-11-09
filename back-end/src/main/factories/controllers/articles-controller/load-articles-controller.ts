@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-misused-promises */
 import { SpaceFlightModel } from '../../../../api/protocols/space-flight-model'
 import { load } from '../../../../api/space-flight'
 import { DbLoadArticles } from '../../../../data/usecases/db-load-articles'
