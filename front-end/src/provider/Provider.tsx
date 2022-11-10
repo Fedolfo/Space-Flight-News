@@ -17,7 +17,6 @@ const Provider: React.FC<Props> = ({ children }) => {
 
   // const [dateValue, setDateValue] = useState([])
   // console.log(dateValue, 'ta pegando da api')
-
   // const test = () => {
   //   const articlesDateMap = articlesData.filter((article) => {
   //     setDateValue(article.publishedAt)
@@ -35,7 +34,7 @@ const Provider: React.FC<Props> = ({ children }) => {
       return article.title.toLowerCase().includes(searchValue.toLowerCase())
     })
     setArticlesDataFilter(articles)
-
+    setSearchValue('')
     // if (date === 'mais_antiga') {
     //   console.log(date)
     //   // setArticlesDataFilter(articlesDate)
@@ -45,7 +44,7 @@ const Provider: React.FC<Props> = ({ children }) => {
 
   useEffect(() => {
     articleFiltered()
-  }, [articlesData, date])
+  }, [articlesData])
 
   const fetchApiArticles = async (): Promise<void> => {
     try {
