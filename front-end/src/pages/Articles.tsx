@@ -4,15 +4,27 @@ import { ArticlesModel } from '../interface/articles'
 import { formatedData } from '../utils/formated-data'
 
 const Articles = (): JSX.Element => {
-  const { articlesData, loading, handleNewArticlesApi, hiddenButton } = useContext(MyContext)
+  const { loading, handleNewArticlesApi, setSearchValue, articlesDataFilter, articleFiltered, setDate, date } = useContext(MyContext)
   return (
     <main>
+      <header>
+        <label htmlFor="search-input">
+          <input type="text" id="search-input" onChange={({ target }) => setSearchValue(target.value) }/>
+        </label>
+        <button type="button" onClick={articleFiltered}>buscar</button>
+        <select name="sort" id="dataId" onChange={({ target }) => setDate(target.value)} value={date}>
+          <option value="" disabled defaultValue='Sort'>Sort</option>
+          <option value="mais_nova">Mais Nova</option>
+          <option value="mais_antiga">Mais Antiga</option>
+        </select>
+      </header>
       <section>
         <h1>Space Flight News</h1>
+        {(articlesDataFilter.length === 0) && <span>Não existe esse titulo </span>}
         {loading ? (
           <div>loading...</div>
         ) : (
-          articlesData.map((article: ArticlesModel, index: React.Key) => {
+         articlesDataFilter?.map((article: ArticlesModel, index: React.Key) => {
             return (
               <div key={index}>
                 <img src={article.imageUrl} alt={article.title} height='150px' />
@@ -29,7 +41,7 @@ const Articles = (): JSX.Element => {
             )
           })
         )}
-        {hiddenButton && (
+        {articlesDataFilter.length > 0 && (
           <button type='button' onClick={handleNewArticlesApi}>
             Carregar mais
           </button>
