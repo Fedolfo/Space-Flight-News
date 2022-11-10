@@ -1,12 +1,13 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import './App.css'
+import MainRoutes from './routes/routes'
 
-function App() {
+const App = (): JSX.Element => {
   return (
-    <div className="App">
-      <p>Hello World</p>
-    </div>
-  );
+    <>
+      <MainRoutes />
+    </>
+  )
 }
 
-export default App;
+export default App

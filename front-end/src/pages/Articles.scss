@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 48.75rem) {
+  header {
+    display: flex;
+    background-color: #1e2022;
+    height: 5rem;
+    justify-content: space-around;
+  }
+
+  .search-input {
+    display: flex;
+    align-items: center;
+  }
+
+  .search-input button {
+    border: none;
+    height: 1.8125rem;
+    background-color: #d07017;
+  }
+
+  header .search-input label {
+    display: flex;
+    align-items: center;
+    border: white .25rem solid;
+  }
+
+  header .search-input label input {
+    border: .0625rem white solid;
+    height: 1.8125rem;
+    padding: .25rem;
+    &:focus {
+        outline: none;
+  }
+  }
+
+  .search-date {
+    display: flex;
+    align-items: center;
+  }
+
+  .search-date select {
+   height: 2.125rem;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    margin: 1.25rem;
+    color: #1e2022;
+  }
+
+  section h1 {
+    text-align: center;
+    margin-bottom: 1.25rem;
+  }
+
+  section .card-not-found {
+    border: none;
+    font-size: 1.25rem;
+    height: 100%;
+  }
+
+  .card-article-img img {
+    width: 20rem;
+    height: 9.0625rem;
+    border-radius: 0.9375rem 0.9375rem 0rem 0rem;
+  }
+
+  .card-article {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+    box-shadow: .125rem .625rem 1.25rem rgb(187, 187, 187);
+    border-radius: 0.9375rem 0.9375rem 0 0;
+  }
+
+  .card-article .card-article-details {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+  }
+
+  .card-article .card-article-details .card-article-date {
+      display: flex;
+      justify-content: space-between;
+      margin: .625rem;
+  }
+
+  .card-article .card-article-details p {
+    margin-bottom: 1.25rem;
+    text-align: left;
+  }
+
+  .card-article .card-article-details button {
+    height: 2.5rem;
+    background-color: #d07017;
+    border-radius: .125rem;
+    font-weight: 600;
+    font-size: medium;
+    border: none;
+   a {
+      text-decoration: none;
+      color: #1e2022
+    }
+  }
+
+  section .button-load {
+    height: 2.5rem;
+    background-color: #d07017;
+    border-radius: .125rem;
+    font-weight: 600;
+    font-size: medium;
+    border: none;
+   a {
+      text-decoration: none;
+      color: #1e2022
+    }
+  }
+}
