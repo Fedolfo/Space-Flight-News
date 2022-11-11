@@ -1,4 +1,4 @@
-# Fullstack Challenge 🏅 2021 - Space Flight News
+# Fullstack Challenge 🏅 2022 - Space Flight News
 
 # Projeto Space Flight News
 
