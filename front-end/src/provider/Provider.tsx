@@ -16,13 +16,13 @@ const Provider: React.FC<Props> = ({ children }) => {
 
   const articleFilteredDate = (articles: ArticlesModel[]) => {
     if (date.includes('mais_nova')) {
-      const articlesMostNew = articles.sort(
+      const articlesMostNew = articles?.sort(
         (a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt),
       )
       setArticlesDataFilter(articlesMostNew)
     }
     if (date.includes('mais_antiga')) {
-      const articlesOlder = articles.sort(
+      const articlesOlder = articles?.sort(
         (a, b) => Date.parse(a.publishedAt) - Date.parse(b.publishedAt),
       )
       setArticlesDataFilter(articlesOlder)
@@ -30,7 +30,7 @@ const Provider: React.FC<Props> = ({ children }) => {
   }
 
   const articleFiltered = () => {
-    const articles = articlesData.filter((article) => {
+    const articles = articlesData?.filter((article) => {
       return article.title.toLowerCase().includes(searchValue.toLowerCase())
     })
     setArticlesDataFilter(articles)
