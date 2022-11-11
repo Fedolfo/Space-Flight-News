@@ -71,6 +71,21 @@
     margin-bottom: 1.25rem;
   }
 
+  section .img-space-flight {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin: 3.125rem auto 1.875rem auto;
+    width: 6.25rem;
+    height: 5.3125rem;
+  }
+
+  section hr {
+    opacity: 0.2;
+    border: .0339rem solid #1e2022;
+    margin-bottom: 3.625rem;
+  }
+
   section .card-not-found {
     border: none;
     font-size: 1.25rem;
@@ -202,6 +217,21 @@
     margin: 1.875rem 0rem 1.875rem 0rem;
   }
 
+  section .img-space-flight {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin: 5.5625rem auto 1.875rem auto;
+    width: 6.25rem;
+    height: 5.3125rem;
+  }
+
+  section hr {
+    opacity: 0.2;
+    border: .0339rem solid #1e2022;
+    margin-bottom: 3.625rem;
+  }
+
   section .card-not-found {
     border: none;
     font-size: 1.25rem;
@@ -309,6 +339,204 @@
     background-color: #d07017;
     border-radius: .125rem;
     font-weight: 600;
+    font-size: medium;
+    border: none;
+   a {
+      text-decoration: none;
+      color: #1e2022
+    }
+  }
+}
+
+@media (min-width: 64rem) and (max-width: 76rem) {
+  header {
+    display: flex;
+    background-color: #1e2022;
+    height: 5rem;
+    justify-content: flex-end;
+  }
+
+  header .search-input {
+    display: flex;
+    align-items: center;
+  }
+
+  header .search-input button {
+    border: none;
+    height: 1.8125rem;
+    background-color: #d07017;
+  }
+
+  header .search-input label {
+    display: flex;
+    align-items: center;
+    border: white .25rem solid;
+    border-radius: .125rem;
+  }
+
+  header .search-input label input {
+    border: .0625rem white solid;
+    height: 1.8125rem;
+    width: 12.625rem;
+    padding: .25rem;
+    &:focus {
+        outline: none;
+    }
+  }
+
+  header .search-input select {
+    background-color: #d07017;
+    height: 2.1875rem;
+    margin-left: 1.0625rem;
+    margin-right: .9375rem;
+
+    &:focus {
+      outline: none;
+    }
+    border-radius: .125rem;
+  }
+
+  header .search-input select option {
+    background-color: white;
+   }
+
+   header .search-input select option[value=""][disabled] {
+    display: none;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    color: #1e2022;
+  }
+
+  section h1 {
+    text-align: center;
+    margin: 1.875rem 0rem 1.875rem 0rem;
+  }
+
+  section .img-space-flight {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin: 5.5625rem auto 1.875rem auto;
+    width: 6.25rem;
+    height: 5.3125rem;
+  }
+
+  section hr {
+    opacity: 0.2;
+    border: .0339rem solid #1e2022;
+    margin-bottom: 3.625rem;
+  }
+
+  section .card-not-found {
+    border: none;
+    font-size: 1.25rem;
+    height: 100%;
+  }
+
+  section .card-article {
+    display: flex;
+    margin: auto;
+    width: 32.4375rem;
+    height: 9.9375rem;
+    margin-bottom: 5.3125rem;
+    border-radius: 0.9375rem 0.9375rem 0 0;
+  }
+
+  section .card-article h4 {
+    font-size: 1rem;
+  }
+
+  section .card-article .card-article-img {
+    display: flex;
+    flex-direction: row;
+  }
+
+  section .card-article .card-article-img img {
+    width: 12.5625rem;
+    height: 9.9375rem;
+    margin-right: 2.375rem;
+    border-radius: .125rem .125rem .125rem .125rem;
+  }
+
+  section .card-article .img-0 {
+    order: 0;
+    margin-right: 2.375rem;
+  }
+
+  section .card-article .img-1 {
+    order: 1;
+    margin-left: 2.375rem;
+  }
+
+  section .card-article .img-3 {
+    order: 1;
+    margin-left: 2.375rem;
+  }
+
+  section .card-article .img-5 {
+    order: 1;
+    margin-left: 2.375rem;
+  }
+
+  section .card-article .img-7 {
+    order: 1;
+    margin-left: 2.375rem;
+  }
+
+  section .card-article .img-9 {
+    order: 1;
+    margin-left: 2.375rem;
+  }
+
+  section .card-article .card-article-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  section .card-article .card-article-details .card-article-date {
+      display: flex;
+      margin-top: .125rem;
+      margin-bottom: .125rem;
+      justify-content: space-between;
+  }
+
+  section .card-article .card-article-details .card-article-date data {
+    font-size: .6875rem;
+  }
+
+  section .card-article .card-article-details .card-article-date span {
+    font-size: .8125rem;
+  }
+
+  section .card-article .card-article-details p {
+    text-align: left;
+    margin-bottom: .1875rem;
+    overflow: auto;
+    margin-top: .125rem;
+  }
+
+  section .card-article .card-article-details button {
+    padding: .3125rem;
+    width: 5.375rem;
+    background-color: #d07017;
+    border-radius: .125rem;
+    font-size: medium;
+    border: none;
+   a {
+      text-decoration: none;
+      color: #1e2022
+    }
+  }
+
+  section .button-load {
+    height: 1.9375rem;
+    margin: auto;
+    background-color: #d07017;
+    width: 7.5rem;
+    border-radius: .125rem;
     font-size: medium;
     border: none;
    a {
