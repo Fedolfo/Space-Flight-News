@@ -54,7 +54,7 @@ O objetivo e exibir os dados dos artigos, com o título, imagem, resumo e data d
 
 4. Apos entrar na pasta back-end, suba o containêr do back-end
 ```bash
-  npm run compose:up ou docker-compose up -d --build
+  npm run up
 ```
 5. No momento que subir o containêr retornará essa messagem no terminal
 ```bash
