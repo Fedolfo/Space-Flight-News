@@ -66,9 +66,10 @@ O objetivo e exibir os dados dos artigos, com o título, imagem, resumo e data d
 ```bash
   npm install && npm start
 ```
-
-7. Para acessar a aplicação do back-end, digite no terminal "npm run start:nodemon"
-
+7. Para acessar a aplicação do back-end, digite no terminal
+```bash
+  npm run start:nodemon
+```
 8. Url do back-end
 ```bash
   back-end: localhost:5050/articles
