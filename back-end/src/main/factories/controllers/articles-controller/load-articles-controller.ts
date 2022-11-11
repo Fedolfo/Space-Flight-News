@@ -19,6 +19,7 @@ const MakeDeleteArticle = async (): Promise<SpaceFlightModel[]> => {
 }
 
 export const MakeArticlesController = async (): Promise<Controller> => {
+  // await MakeAddArticle() // <--- Para questões de testar a aplicação, deve remover o comentário da função para ser possível popular o banco de dados, logo em seguida dar o comando no "cmd" "npm run start:nodemon". ps: Apos, popular recomendaria comentar a função para não popular demais o banco xD, caso se você iniciar o comando de iniciar novamente o servidor novamente, pode ocorrer esse leve acaso <3.
   cron.schedule('1 * 9 * * *', async () => await MakeAddArticle())
   cron.schedule('0 * 9 * * *', async () => await MakeDeleteArticle())
   const articlesMongoRepository = new ArticlesMongoRepository()
