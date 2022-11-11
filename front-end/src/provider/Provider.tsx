@@ -2,7 +2,6 @@ import MyContext from '../context/MyContext'
 import React, { useState, useEffect } from 'react'
 import { api } from '../services/axios'
 import { ArticlesModel } from '../interface/articles'
-// import { formatedData } from '../utils/formated-data'
 
 interface Props {
   children: React.ReactNode
@@ -15,36 +14,36 @@ const Provider: React.FC<Props> = ({ children }) => {
   const [searchValue, setSearchValue] = useState<string>('')
   const [date, setDate] = useState<string>('')
 
-  // const [dateValue, setDateValue] = useState([])
-  // console.log(dateValue, 'ta pegando da api')
-  // const test = () => {
-  //   const articlesDateMap = articlesData.filter((article) => {
-  //     setDateValue(article.publishedAt)
-  //   })
-  //   // return articlesDateMap
-  //   // const sorted_meetings = articlesData.sort((a,b) => {
-  //   //   return new Date(a.publishedAt).getTime() -
-  //   //   new Date(b.publishedAt).getTime()
-  //   // }).reverse();
-  //   return articlesDateMap
-  // }
+  const articleFilteredDate = (articles: ArticlesModel[]) => {
+    if (date.includes('mais_nova')) {
+      const articlesMostNew = articles.sort(
+        (a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt),
+      )
+      setArticlesDataFilter(articlesMostNew)
+    }
+    if (date.includes('mais_antiga')) {
+      const articlesOlder = articles.sort(
+        (a, b) => Date.parse(a.publishedAt) - Date.parse(b.publishedAt),
+      )
+      setArticlesDataFilter(articlesOlder)
+    }
+  }
 
   const articleFiltered = () => {
     const articles = articlesData.filter((article) => {
       return article.title.toLowerCase().includes(searchValue.toLowerCase())
     })
     setArticlesDataFilter(articles)
+    articleFilteredDate(articles)
     setSearchValue('')
-    // if (date === 'mais_antiga') {
-    //   console.log(date)
-    //   // setArticlesDataFilter(articlesDate)
-    //   return;
-    // }
+    if (searchValue === '') {
+      (document.querySelector('#search-input') as HTMLInputElement).value = ''
+    }
   }
 
   useEffect(() => {
     articleFiltered()
-  }, [articlesData])
+  }, [articlesData, date])
 
   const fetchApiArticles = async (): Promise<void> => {
     try {
