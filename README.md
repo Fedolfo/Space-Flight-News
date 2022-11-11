@@ -77,7 +77,7 @@ O objetivo e exibir os dados dos artigos, com o título, imagem, resumo e data d
 ```bash
   back-end: localhost:5050/articles?p=10
 ```
-9. Url do front-end com paginação
+9. Url do front-end
 ```bash
   front-end: localhost:3000
 ```
