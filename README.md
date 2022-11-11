@@ -19,7 +19,7 @@ O objetivo e exibir os dados dos artigos, com o título, imagem, resumo e data d
 * Cross-fetch
 * Docker
 * S.O.L.I.D
-* Factories
+* Design Patterns
 * Jest
 
 ## Tecnologias utilizadas no front-end
