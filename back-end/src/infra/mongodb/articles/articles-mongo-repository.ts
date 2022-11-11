@@ -15,7 +15,6 @@ export class ArticlesMongoRepository implements AddArticlesRepository, LoadArtic
   }
 
   async loadAllArticles (page: number = 2): Promise<ArticlesModel[]> {
-    console.log(page)
     const articlesCollection = await MongoHelper.getCollection('articles')
     const result = articlesCollection.find({}).limit(Number(page)).toArray()
     return result as unknown as ArticlesModel[]
