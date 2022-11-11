@@ -8,6 +8,8 @@ O Projeto Space Flight News e uma aplicação Full Stack onde e criado uma REST 
 
 O objetivo e exibir os dados dos artigos, com o título, imagem, resumo e data de publicação. Além de funcionalidades como filtrar por artigos novos e antigos e filtragem de busca por pesquisa.
 
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/57bc0f13debb42d99251b1c597db8e19" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
 ## Tecnologias utilizadas no back-end e metodologias
 
 * NodeJs
