@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import MyContext from '../context/MyContext'
 import { ArticlesModel } from '../interface/articles'
 import { formatedData } from '../utils/formated-data'
+import spaceFlight from '../assets/images/space-flight.png'
 import './Articles.scss'
 
 const Articles = (): JSX.Element => {
@@ -43,7 +44,9 @@ const Articles = (): JSX.Element => {
         </div>
       </header>
       <section>
+        <img src={spaceFlight} alt='imagem de um foguete' className='img-space-flight'/>
         <h1>Space Flight News</h1>
+        <hr />
         {articlesDataFilter.length === 0 && (
           <button onClick={articleFiltered} className='card-not-found'>
             Ops! Parece que não existe esse nome que está buscando, mas não fique triste,{' '}
